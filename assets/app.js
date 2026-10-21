@@ -94,9 +94,10 @@ const PORTALS = [
  {name:"DCZ (ইউক্রেন)", url:"https://www.dcz.gov.ua/", country:"ukraine", countryBn:"ইউক্রেন", flag:"🇺🇦", type:"gov", lang:"ইউক্রেনিয়ান", desc:"ইউক্রেন সরকারের অফিসিয়াল এমপ্লয়মেন্ট সার্ভিস — সরকারি পোর্টাল, সম্পূর্ণ ফ্রি ও সবচেয়ে নির্ভরযোগ্য। রাষ্ট্রীয় কর্মসংস্থান সেবা।", jobs:["cleaner","driver","warehouse","factory","hotel","construction"]},
  {name:"Work.ua", url:"https://www.work.ua/", country:"ukraine", countryBn:"ইউক্রেন", flag:"🇺🇦", type:"private", lang:"ইউক্রেনিয়ান / ইংরেজি", desc:"ইউক্রেন-এর সবচেয়ে বড় ও জনপ্রিয় জব পোর্টাল — সব ধরনের কাজের পোস্ট থাকে।", jobs:["cleaner","driver","warehouse","factory","hotel","construction"]}
 ];
-const COUNTRIES = [["all", "🌍 সব দেশ"], ["europe", "🇪🇺 ইউরোপ / আন্তর্জাতিক"], ["lithuania", "🇱🇹 লিথুয়ানিয়া"], ["latvia", "🇱🇻 লাটভিয়া"], ["estonia", "🇪🇪 এস্তোনিয়া"], ["poland", "🇵🇱 পোল্যান্ড"], ["germany", "🇩🇪 জার্মানি"], ["france", "🇫🇷 ফ্রান্স"], ["italy", "🇮🇹 ইতালি"], ["spain", "🇪🇸 স্পেন"], ["portugal", "🇵🇹 পর্তুগাল"], ["netherlands", "🇳🇱 নেদারল্যান্ডস"], ["belgium", "🇧🇪 বেলজিয়াম"], ["austria", "🇦🇹 অস্ট্রিয়া"], ["switzerland", "🇨🇭 সুইজারল্যান্ড"], ["uk", "🇬🇧 যুক্তরাজ্য"], ["ireland", "🇮🇪 আয়ারল্যান্ড"], ["denmark", "🇩🇰 ডেনমার্ক"], ["sweden", "🇸🇪 সুইডেন"], ["norway", "🇳🇴 নরওয়ে"], ["finland", "🇫🇮 ফিনল্যান্ড"], ["iceland", "🇮🇸 আইসল্যান্ড"], ["czechia", "🇨🇿 চেক প্রজাতন্ত্র"], ["slovakia", "🇸🇰 স্লোভাকিয়া"], ["hungary", "🇭🇺 হাঙ্গেরি"], ["romania", "🇷🇴 রোমানিয়া"], ["bulgaria", "🇧🇬 বুলগেরিয়া"], ["greece", "🇬🇷 গ্রিস"], ["croatia", "🇭🇷 ক্রোয়েশিয়া"], ["slovenia", "🇸🇮 স্লোভেনিয়া"], ["serbia", "🇷🇸 সার্বিয়া"], ["bosnia", "🇧🇦 বসনিয়া"], ["montenegro", "🇲🇪 মন্টেনেগ্রো"], ["northmacedonia", "🇲🇰 উত্তর মেসিডোনিয়া"], ["albania", "🇦🇱 আলবেনিয়া"], ["moldova", "🇲🇩 মলদোভা"], ["ukraine", "🇺🇦 ইউক্রেন"], ["cyprus", "🇨🇾 সাইপ্রাস"], ["malta", "🇲🇹 মাল্টা"], ["luxembourg", "🇱🇺 লুক্সেমবার্গ"], ["liechtenstein", "🇱🇮 লিখটেনস্টাইন"], ["bangladesh", "🇧🇩 বাংলাদেশ"]];
+const COUNTRIES = [["all", "সব দেশ"], ["europe", "ইউরোপ / আন্তর্জাতিক"], ["lithuania", "লিথুয়ানিয়া"], ["latvia", "লাটভিয়া"], ["estonia", "এস্তোনিয়া"], ["poland", "পোল্যান্ড"], ["germany", "জার্মানি"], ["france", "ফ্রান্স"], ["italy", "ইতালি"], ["spain", "স্পেন"], ["portugal", "পর্তুগাল"], ["netherlands", "নেদারল্যান্ডস"], ["belgium", "বেলজিয়াম"], ["austria", "অস্ট্রিয়া"], ["switzerland", "সুইজারল্যান্ড"], ["uk", "যুক্তরাজ্য"], ["ireland", "আয়ারল্যান্ড"], ["denmark", "ডেনমার্ক"], ["sweden", "সুইডেন"], ["norway", "নরওয়ে"], ["finland", "ফিনল্যান্ড"], ["iceland", "আইসল্যান্ড"], ["czechia", "চেক প্রজাতন্ত্র"], ["slovakia", "স্লোভাকিয়া"], ["hungary", "হাঙ্গেরি"], ["romania", "রোমানিয়া"], ["bulgaria", "বুলগেরিয়া"], ["greece", "গ্রিস"], ["croatia", "ক্রোয়েশিয়া"], ["slovenia", "স্লোভেনিয়া"], ["serbia", "সার্বিয়া"], ["bosnia", "বসনিয়া"], ["montenegro", "মন্টেনেগ্রো"], ["northmacedonia", "উত্তর মেসিডোনিয়া"], ["albania", "আলবেনিয়া"], ["moldova", "মলদোভা"], ["ukraine", "ইউক্রেন"], ["cyprus", "সাইপ্রাস"], ["malta", "মাল্টা"], ["luxembourg", "লুক্সেমবার্গ"], ["liechtenstein", "লিখটেনস্টাইন"], ["bangladesh", "বাংলাদেশ"]];
+const FLAG_CODE = {lithuania:"lt",latvia:"lv",estonia:"ee",poland:"pl",germany:"de",france:"fr",italy:"it",spain:"es",portugal:"pt",netherlands:"nl",belgium:"be",austria:"at",switzerland:"ch",uk:"gb",ireland:"ie",denmark:"dk",sweden:"se",norway:"no",finland:"fi",iceland:"is",czechia:"cz",slovakia:"sk",hungary:"hu",romania:"ro",bulgaria:"bg",greece:"gr",croatia:"hr",slovenia:"si",serbia:"rs",bosnia:"ba",montenegro:"me",northmacedonia:"mk",albania:"al",moldova:"md",ukraine:"ua",cyprus:"cy",malta:"mt",luxembourg:"lu",liechtenstein:"li",bangladesh:"bd",europe:"eu"};
 const JOBS = [
- ["all","সব কাজ"],["cleaner","🧹 ক্লিনার"],["driver","🚛 ড্রাইভার"],["warehouse","📦 ওয়্যারহাউস"],["factory","🏭 ফ্যাক্টরি"],["hotel","🏨 হোটেল"],["construction","🏗️ নির্মাণ"]
+ ["all","সব কাজ"],["cleaner","ক্লিনার"],["driver","ড্রাইভার"],["warehouse","ওয়্যারহাউস"],["factory","ফ্যাক্টরি"],["hotel","হোটেল"],["construction","নির্মাণ"]
 ];
 const JOB_BN = {cleaner:"ক্লিনার",driver:"ড্রাইভার",warehouse:"ওয়্যারহাউস",factory:"ফ্যাক্টরি",hotel:"হোটেল",construction:"নির্মাণ"};
 let activeCountry = "all", activeJob = "all", query = "";
@@ -125,17 +126,20 @@ function render(){
   const grid = document.getElementById("portalGrid");
   grid.innerHTML = list.map(p=>`
     <article class="card">
-      <div class="card-top">
-        <h3>${p.flag} ${p.name}</h3>
+      <div class="card-head">
+        <img class="flag-img" src="assets/flags/${FLAG_CODE[p.country] || "eu"}.png" alt="${p.countryBn}">
+        <div class="card-head-text">
+          <h3>${p.name}</h3>
+          <div class="country-name">${p.countryBn}</div>
+        </div>
         <div class="badges">
-          ${p.type==="gov" ? '<span class="badge gov">🏛️ সরকারি</span>' : '<span class="badge pvt">বেসরকারি</span>'}
+          ${p.type==="gov" ? '<span class="badge gov">সরকারি</span>' : '<span class="badge pvt">বেসরকারি</span>'}
           <span class="badge free">ফ্রি</span>
         </div>
       </div>
-      <div class="country">📍 ${p.countryBn} • 🌐 ${p.lang}</div>
       <p class="desc">${p.desc}</p>
-      <div class="tags">${p.jobs.map(j=>`<span class="tag">${JOB_BN[j]}</span>`).join("")}</div>
-      <a class="visit" href="${p.url}" target="_blank" rel="noopener">পোর্টালে যান →</a>
+      <a class="visit" href="${p.url}" target="_blank" rel="noopener">পোর্টালে যান</a>
+      <a class="newjobs" href="${p.url}" target="_blank" rel="noopener">আজকের নতুন চাকরি দেখুন</a>
     </article>`).join("");
   document.getElementById("emptyState").hidden = list.length>0;
   document.getElementById("resultCount").textContent = `মোট ${list.length}টি পোর্টাল দেখানো হচ্ছে`;
