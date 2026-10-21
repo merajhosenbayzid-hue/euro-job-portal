@@ -100,9 +100,16 @@ const JOBS = [
 ];
 const JOB_BN = {cleaner:"ক্লিনার",driver:"ড্রাইভার",warehouse:"ওয়্যারহাউস",factory:"ফ্যাক্টরি",hotel:"হোটেল",construction:"নির্মাণ"};
 let activeCountry = "all", activeJob = "all", query = "";
+function flagSrc(k){ return "assets/flags/" + (FLAG_CODE[k] || "eu") + ".png"; }
 function renderCountries(){
-  const sel = document.getElementById("countrySelect");
-  sel.innerHTML = COUNTRIES.map(([k,l])=>`<option value="${k}" ${k===activeCountry?"selected":""}>${l}</option>`).join("");
+  const btn = document.getElementById("countryBtn");
+  const list = document.getElementById("countryList");
+  const cur = COUNTRIES.find(([k])=>k===activeCountry) || COUNTRIES[0];
+  btn.innerHTML = `<img class="dd-flag" src="${flagSrc(cur[0])}" alt=""> <span>${cur[1]}</span> <span class="dd-caret">▾</span>`;
+  list.innerHTML = COUNTRIES.map(([k,l])=>`<button type="button" class="country-item ${k===activeCountry?"active":""}" data-k="${k}"><img class="dd-flag" src="${flagSrc(k)}" alt=""> <span>${l}</span></button>`).join("");
+  list.querySelectorAll(".country-item").forEach(it=>{
+    it.onclick = ()=>{ activeCountry = it.dataset.k; list.hidden = true; render(); };
+  });
 }
 function renderJobChips(){
   const el = document.getElementById("jobChips"); el.innerHTML="";
@@ -147,5 +154,6 @@ function render(){
   document.getElementById("statGov").textContent = PORTALS.filter(p=>p.type==="gov").length;
 }
 document.getElementById("searchInput").addEventListener("input", e=>{query=e.target.value; render();});
-document.getElementById("countrySelect").addEventListener("change", e=>{activeCountry=e.target.value; render();});
+document.getElementById("countryBtn").addEventListener("click", e=>{ e.stopPropagation(); const l=document.getElementById("countryList"); l.hidden=!l.hidden; });
+document.addEventListener("click", e=>{ const w=document.getElementById("countrySelectWrap"); if(w && !w.contains(e.target)) document.getElementById("countryList").hidden=true; });
 render();

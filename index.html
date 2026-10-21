@@ -43,7 +43,6 @@
 
 <section class="hero">
   <div class="wrap">
-    <img class="hero-logo" src="assets/logo.png" alt="Euro Job Portal — Europe job portals in one place">
     <div class="hero-badge">যাচাই করা পোর্টাল • দালাল ছাড়া সরাসরি আবেদন</div>
     <h1>ইউরোপের সব দেশের জব পোর্টাল<br><span>এক জায়গায়</span></h1>
     <p class="hero-sub">৩৯টি ইউরোপীয় দেশের সবচেয়ে বড় জব পোর্টাল আর প্রতিটি দেশের সরকারি কর্মসংস্থান ওয়েবসাইট — দেশ আর কাজ অনুযায়ী খুঁজুন, এক ক্লিকে সরাসরি পোর্টালে যান।</p>
@@ -64,7 +63,10 @@
 
 <main class="wrap" id="portals">
   <h2 class="section-title">দেশ বেছে নিন</h2>
-  <select id="countrySelect" class="country-select"></select>
+  <div class="custom-select" id="countrySelectWrap">
+    <button type="button" id="countryBtn" class="country-btn"></button>
+    <div id="countryList" class="country-list" hidden></div>
+  </div>
 
   <h2 class="section-title">কাজের ধরন অনুযায়ী</h2>
   <div class="chips" id="jobChips"></div>
