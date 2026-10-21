@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://merajhosenbayzid-hue.github.io/euro-job-portal/sitemap.xml
